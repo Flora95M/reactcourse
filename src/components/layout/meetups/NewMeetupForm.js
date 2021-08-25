@@ -2,7 +2,9 @@ import  {useRef} from 'react'; //gartumenk inputi mechi krvadznere user-i goghmi
 
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
-function NewMeetupForm() {
+
+//pokhantsumenk props NewMeetup page-ic sdanalou backendi requeste(vore hamarvume ira parent comp)
+function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -23,7 +25,9 @@ function NewMeetupForm() {
        description: enteredDescription,
     }
 
-    console.log(meetupData);
+    // console.log(meetupData);
+    //onAddMeetup(): mer backend-i requesti methodne vore call enk arel NewMeetup component-ic
+    props.onAddMeetup(meetupData);
 
   }
   return (

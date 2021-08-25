@@ -2,6 +2,7 @@ import  classes from './MeetupItem.module.css';
 import Card from '../ui/Card';
 
 function MeetupItem(props) {
+  console.log(props, 'props in meetup item');
   return (
     <li className = {classes.item}>
       <Card>
