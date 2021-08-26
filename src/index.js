@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import  {BrowserRouter} from 'react-router-dom';
+import  {FavoritesContextProvider} from './store/favorites-context';
 
+
+  //aisdegh wrap erink polor componentnerin
 ReactDOM.render(
-  <BrowserRouter>
+ <FavoritesContextProvider>
+ <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  </BrowserRouter>
+ </FavoritesContextProvider>,
+
+ 
   document.getElementById('root')
 );
 

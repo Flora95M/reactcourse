@@ -25,7 +25,7 @@ function NewMeetupForm(props) {
        description: enteredDescription,
     }
 
-    // console.log(meetupData);
+   
     //onAddMeetup(): mer backend-i requesti methodne vore call enk arel NewMeetup component-ic
     props.onAddMeetup(meetupData);
 
