@@ -20,14 +20,14 @@ function toggleFavoriteStatesHandler(){
       title: props.title,
       address: props.address,
       image: props.image,
-      description: props.description
+      description: props.description,
+      isFavorite: true
     });
   }
 }
 
 function deleteMeetupHandler(meetupId){
  props.onDeleteMeetup(meetupId);
-  console.log(meetupId);
 }
 
  

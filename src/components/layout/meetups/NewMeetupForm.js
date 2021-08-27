@@ -23,6 +23,7 @@ function NewMeetupForm(props) {
        image: enteredImage,
        address: enteredAddress,
        description: enteredDescription,
+       isFavorite: false
     }
 
    

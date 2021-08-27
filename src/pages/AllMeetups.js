@@ -45,9 +45,8 @@ function AllMeetupsPage() {
            ...data[key] //add all key,value pairs from nested object to meetup object
          };
          meetups.push(meetup);
-         console.log(meetups);
        }
-
+       console.log(meetups);
        setIsLoading(false);
        setLoadedMeetups(meetups);
     });
@@ -69,7 +68,7 @@ function AllMeetupsPage() {
       return <li key ={meetup.id}>{meetup.title}</li>;
     })}
     </ul>     */
-    <MeetupList meetups = {loadedMeetups}/>
+    <MeetupList meetups = {loadedMeetups} filteredMeetups = {setLoadedMeetups}/>
     }
   </section>
  
