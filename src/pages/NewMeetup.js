@@ -39,8 +39,6 @@ function NewMeetupPage() {
     <NewMeetupForm onAddMeetup = {addMeetupHandler}/>
     </section>
    )
-  
-
 }
 
 export default NewMeetupPage;

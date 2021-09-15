@@ -1,5 +1,6 @@
 //createContext is an object
 import {createContext, useState} from 'react';
+import firebase from '../firebase';
 
 const FavoritesContext = createContext({
   //popokhaganner voronk mez bedken iren default arjeknerov
@@ -24,20 +25,28 @@ export function FavoritesContextProvider(props){
 
   //Methods that we need and manage them from another components
   function addfavoritesHandler(favoriteMeetup){
+    debugger
+    console.log(favoriteMeetup);
     setUserFavorites((prevUserFavorites) => {
       //nakhort favorite meetup-in vra avelatsnume nore
       return prevUserFavorites.concat(favoriteMeetup);
     });
+    firebase.database().ref('favorites').push(favoriteMeetup);
   }
 
   function removeFavoriteHandler(meetupId){
+    debugger
     setUserFavorites((prevUserFavorites) => {
      return prevUserFavorites.filter(prevMeetupsId => 
         prevMeetupsId.id !== meetupId);
     });
+    firebase.database().ref(`/favorites/${meetupId}`).remove();
   }
 
+
+
   function itemIsFavoriteHandler(meetupId){
+    debugger
     return userFavorites.some(meetup => 
       meetup.id === meetupId)
   }

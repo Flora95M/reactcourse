@@ -21,7 +21,7 @@ function AllMeetupsPage() {
   }, []);
 
 
-      function getMeetups() {
+     async function getMeetups() {
             //amen ankam zabros aneluc backendic setIsLoading@ true g verakrenk vor minchev 
     //amen dvyalnere sdana inke loading lini
     setIsLoading(true);
